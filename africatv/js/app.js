@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fetch and parse the IPTV playlist
     async function fetchPlaylist() {
-        const playlistUrl = "https://raw.githubusercontent.com/iptv-org/iptv/master/playlist.m3u"; // Example M3U URL
+        const playlistUrl = "https://iptv-org.github.io/iptv/categories/business.m3u"; // Example M3U URL
         try {
             const response = await fetch(playlistUrl);
             if (!response.ok) throw new Error('Failed to fetch playlist');
