@@ -10,22 +10,34 @@
 <body>
     <div class="container my-5">
         <h1 class="text-center">UGTV</h1>
-        
-        <!-- Channel Search Input -->
+
+        <!-- Search Bar for Channel Filtering -->
         <div class="mb-3">
             <input type="text" id="channelSearch" class="form-control" placeholder="Search for channels" />
         </div>
-        
+
+        <!-- Channel Categories -->
+        <h3>Categories</h3>
+        <div id="categories" class="mb-4">
+            <!-- Categories will be dynamically populated -->
+        </div>
+
         <!-- IPTV Playlist Selection -->
-        <select id="channelSelect" class="form-select mb-3" onchange="playStream()">
-            <option value="" disabled selected>Select a Channel</option>
-        </select>
-        
-        <!-- Error message -->
+        <div id="channelList" class="mb-4">
+            <!-- Channels will be dynamically populated -->
+        </div>
+
+        <!-- Favorites List -->
+        <h3>Favorites</h3>
+        <div id="favoritesList" class="mb-4">
+            <!-- Favorite Channels will be dynamically populated -->
+        </div>
+
+        <!-- Error Message -->
         <div id="error-message" class="alert alert-danger d-none" role="alert">
             An error occurred while loading the stream. Please try again later.
         </div>
-        
+
         <!-- Video Player -->
         <video id="iptvPlayer" controls width="100%" class="mb-4">
             <source id="videoSource" type="application/x-mpegURL" />
